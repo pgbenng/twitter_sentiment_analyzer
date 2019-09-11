@@ -8,11 +8,10 @@
             <input name="searchitem">
             <input type="submit">
         </form>
-        {% for tweet_obj in tweet_objs %}
-            <div> {{ tweet_obj ['text']}} </div>
+        {% for i in range(answer|length) %}
+            <div>{{ tweet_objs[i]["text"] }}</div>
+            <div>{{ answer[i] }}</div>
             <br/>
         {% endfor %}
-        
     </body>
-
 </html>
