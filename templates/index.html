@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        
+    </head>
     <body>
+        <form method="GET">
+            <input name="searchitem">
+            <input type="submit">
+        </form>
+        {% for tweet_obj in tweet_objs %}
+            <div> {{ tweet_obj ['text']}} </div>
+            <br/>
+        {% endfor %}
         
     </body>
 
