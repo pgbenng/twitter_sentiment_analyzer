@@ -1,0 +1,40 @@
+body {
+    background-color: lightblue;
+    text-align: center;
+    font-family: 'Livvic', sans-serif;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+form {
+    margin: 40px;
+}
+
+p {
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    
+}
+
+input[type=submit] {
+    background-color: whitesmoke;
+    width: 75px;
+    height: 25px;
+    margin: 10px;
+}
+
+input[name=searchitem] {
+    height: 20px;
+    width: 500px;
+    background-color: lightgrey;
+    margin: 10px;
+}
+
+
+
+

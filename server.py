@@ -23,10 +23,6 @@ def home():
     return render_template('index.html', tweet_objs=tweets_dict_list, answer=good_counter_and_bad_counter)
 
    
-  
-
-
-
 def get_tweets(searchitem):
     url = 'https://api.twitter.com/1.1/search/tweets.json?q=%23{}&result_type=recent'.format(searchitem)
     BEARER_TOKEN = os.getenv("BEARER_TOKEN") 
@@ -35,6 +31,7 @@ def get_tweets(searchitem):
     return res.content
 
 def run_analysis(tweet_text):
+    tweet_text = tweet_text.lower()
     with open("positive.txt", "r") as f:
         positive_words = set(f.read().split("\n"))
 
@@ -46,6 +43,7 @@ def run_analysis(tweet_text):
     good_counter = 0
     bad_counter = 0
     for word in words:
+        word = word.strip()
         if word in positive_words:
             good_counter +=1
         if word in negative_words:
